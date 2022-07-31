@@ -1,0 +1,211 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: #5352ed;
+}
+
+a:hover {
+  color: #1e90ff;
+}
+
+a:visited {
+  color: purple;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav h1 {
+  color: #2f3542;
+}
+
+.nav h1 .title {
+  color: #2f3542;
+}
+
+.container_1 {
+  margin: 2rem 10rem;
+}
+
+.container_1 .search_form form {
+  position: relative;
+}
+
+.container_1 .search_form form .search_input {
+  border: 1px solid #70a1ff;
+  padding: 0.6rem 1rem;
+  padding-right: 6rem;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.container_1 .search_form form .search_input:hover, .container_1 .search_form form .search_input:active {
+  background-color: #fefefe8d;
+  border: 1px solid #3742fa;
+}
+
+.container_1 .search_form form .search_icon {
+  position: absolute;
+  right: 2%;
+  top: 20%;
+  height: 20px;
+  cursor: pointer;
+}
+
+.container_1 .search_form form .reset_btn {
+  position: absolute;
+  right: 6%;
+  top: 23%;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.result_container {
+  margin: 2rem 10rem;
+}
+
+.result_container h1 {
+  color: #2f3542;
+  margin-bottom: 1rem;
+}
+
+.result_container .back_button button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5px;
+  width: 100%;
+  font-size: 20px;
+  background-color: #dfe4ea;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.result_container .back_button button:hover {
+  background-color: #dfe4ea;
+}
+
+.result_container .card {
+  padding: 1rem;
+  border: 1px solid #8080805f;
+  border-radius: 10px;
+}
+
+.result_container .card:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.result_container .card .card_headings {
+  font-weight: 600;
+}
+
+.result_container .card .card_headings h1 {
+  font-size: 20px;
+  color: #1e90ff;
+}
+
+.result_container .card .card_headings small {
+  font-size: 14px;
+}
+
+.result_container .card .card_body {
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.result_container .card .card_body .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: justify;
+}
+
+.result_container .card .card_body .description .bb-1 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #57606f;
+}
+
+.result_container .card .card_body .description p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.result_container .card .card_body .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.result_container .card .card_body .details p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.result_container .card .card_body p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 16px;
+  display: inline;
+  margin-bottom: 1px;
+}
+
+.result_container .card .card_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.result_container .card .card_footer .start {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/*# sourceMappingURL=App.css.map */
