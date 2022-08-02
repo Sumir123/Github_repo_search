@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { ImCross } from "react-icons/im";
 import { BsSearch } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import SearchResult from "./searchResult";
@@ -11,7 +10,7 @@ const SearchBar = () => {
 
   var searchval = prams.value;
 
-  const [searchInput, setSearchInput] = useState(searchval);
+  const [searchInput, setSearchInput] = useState(searchval ? searchval : "");
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -25,10 +24,11 @@ const SearchBar = () => {
         console.error(error);
       }
     }
+
     if (searchval) {
       search();
     }
-  }, []);
+  }, [searchInput, searchval]);
 
   const handleChange = (e) => {
     setSearchInput(e.target.value);
@@ -39,14 +39,6 @@ const SearchBar = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.get(
-        `https://api.github.com/search/repositories?q=${searchInput}`
-      );
-      setData(response.data.items);
-    } catch (error) {
-      console.error(error);
-    }
     navigate("/search/" + searchInput);
   };
 

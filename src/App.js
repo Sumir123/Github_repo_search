@@ -1,4 +1,5 @@
-import "./App.css";
+
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SearchBar from "./conponents/searchBar";
 import RepoDetails from "./conponents/repoDetails";
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SearchBar />} />
           <Route path="search" element={<SearchBar />}>
-            <Route path=":value"></Route>
+            <Route path=":value" element={<SearchBar />}></Route>
           </Route>
           <Route path="/repo" element={<RepoDetails />}>
             <Route path=":username/:reponame" element={<RepoDetails />} />

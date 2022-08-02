@@ -4,14 +4,14 @@ import { AiOutlineStar, AiOutlineEye } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import { TbGitFork } from "react-icons/tb";
 
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 const RepoDetails = () => {
   const navigate = useNavigate();
   const prams = useParams();
-  const [repoDetails, setRepoDetails] = useState([]);
-
   var username = prams.username;
   var reponame = prams.reponame;
+
+  const [repoDetails, setRepoDetails] = useState([]);
 
   useEffect(() => {
     const getRepoDetails = async () => {
@@ -20,13 +20,12 @@ const RepoDetails = () => {
           `https://api.github.com/repos/${username}/${reponame}`
         );
         setRepoDetails(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error(error);
       }
     };
     getRepoDetails();
-  }, []);
+  }, [repoDetails, username, reponame]);
 
   const goback = () => {
     navigate(-1);
@@ -37,11 +36,15 @@ const RepoDetails = () => {
       <div className="card" key={repoDetails.id}>
         <div className="card_headings">
           <h1>
-            <a href={repoDetails.owner.html_url} target="_blank">
+            <a
+              href={repoDetails.owner.html_url}
+              target="_blank"
+              rel="noreferrer"
+            >
               {repoDetails.owner.login}
             </a>
             &nbsp; - &nbsp;
-            <a href={repoDetails.html_url} target="_blank">
+            <a href={repoDetails.html_url} target="_blank" rel="noreferrer">
               {repoDetails.name}
             </a>
           </h1>
