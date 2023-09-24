@@ -1,3 +1,8 @@
+![image](https://github.com/Sumir123/Github_repo_search/assets/71181873/1527f7ca-6fc6-4a0c-a937-2d6236e1dfc6)
+
+![image](https://github.com/Sumir123/Github_repo_search/assets/71181873/50add45f-e774-4ff8-8cad-cf38bde20f96)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
